@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Image frame</title>
+  
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+  </head>
+  <body>
+    {% if imagefile %}
+    <h1>Hello {{ imagefile }}!</h1>
+    <p>
+      <img src="{{ url_for('static', filename=imagefile) }}">
+    </p>
+    {% else %}
+    <h1>Hello World!</h1>
+    {% endif %}
+  </body>
+</html>
