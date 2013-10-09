@@ -1,4 +1,4 @@
-#!/c/Python27/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 #-- convert data of a csv file to a sqlite database

@@ -1,4 +1,4 @@
-#!/c/Python27/python
+#!/usr/bin/python
 
 #-- solve an equation ax + by + cz = d
 #   with nominating x, y, or z as the unknown
