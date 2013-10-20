@@ -36,3 +36,21 @@ http://stackoverflow.com/questions/15480319/case-sensitive-and-insensitive-like-
 
 SELECT * FROM airports
        	      WHERE country LIKE '%ja%';
+
+/* How do I list the tables in a SQLite database file (after ATTACH command) */
+/*
+http://stackoverflow.com/questions/82875/how-do-i-list-the-tables-in-a-sqlite-database-file
+*/
+SELECT * FROM dbname.sqlite_master WHERE type='table';
+
+/* attach another sqlite3 database */
+
+ATTACH 'englishwordrank.sqlite3' AS wr;
+
+/* joint a table with a table from another database */
+
+SELECT  mylist.id, mylist.n, mylist.word, 
+	wordrank.rank, wordrank.count 
+		       FROM mylist, wr.wordrank 
+		       	    WHERE mylist.word = wordrank.word;
+
