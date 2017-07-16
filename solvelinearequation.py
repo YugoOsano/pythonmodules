@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 #-- solve an equation ax + by + cz = d
 #   with nominating x, y, or z as the unknown
@@ -31,10 +31,14 @@ def calccrossingwithcube(abcd):
                                for i in range(2) for j in range(2)] 
     
     newvars  = map(lambda l: solvelineareq(adict, l), fixedvars)
-    crossing = filter(lambda l: l['x'] >= 0.0 and l['x'] <= 1.0 and \
-                          l['y']       >= 0.0 and l['y'] <= 1.0 and \
-                          l['z']       >= 0.0 and l['z'] <= 1.0, newvars)
-
+    # python2 -> 3
+#    crossing = filter(lambda l: l['x'] >= 0.0 and l['x'] <= 1.0 and \
+#                          l['y']       >= 0.0 and l['y'] <= 1.0 and \
+#                          l['z']       >= 0.0 and l['z'] <= 1.0, newvars)
+    crossing = \
+        list(filter(lambda l: l['x'] >= 0.0 and l['x'] <= 1.0 and \
+                        l['y']       >= 0.0 and l['y'] <= 1.0 and \
+                        l['z']       >= 0.0 and l['z'] <= 1.0, newvars))
     return crossing
 
 #---
@@ -66,8 +70,15 @@ if __name__ == "__main__":
                                    ]) == 1,\
                           pairs)
 
+#    for p in outpairs:
+#        print p[0]['x'],'\t',p[0]['y'],'\t',p[0]['z']
+#        print p[1]['x'],'\t',p[1]['y'],'\t',p[1]['z']
+#        print '\n'
+        #print p
+
+    # in python3 print is a function instead of statement 
     for p in outpairs:
-        print p[0]['x'],'\t',p[0]['y'],'\t',p[0]['z']
-        print p[1]['x'],'\t',p[1]['y'],'\t',p[1]['z']
-        print '\n'
+        print (p[0]['x'],'\t',p[0]['y'],'\t',p[0]['z'])
+        print (p[1]['x'],'\t',p[1]['y'],'\t',p[1]['z'])
+        print ('\n')
         #print p
