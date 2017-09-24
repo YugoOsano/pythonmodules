@@ -12,6 +12,9 @@
 
 # https://www.trifields.jp/how-to-install-matplotlib-in-ubuntu-14-04-and-python-3-1173
 
+# for scikit-learn,
+# sudo apt-get install python3-sklearn
+
 import matplotlib.pyplot as plt
 
 plt.ion()
