@@ -36,7 +36,14 @@ class Widget(object):
     def SelfName(cls):
         # class member variable can be defined also herein
         cls.number = 1
-        
+
+    #-- static method --
+    #   a static method is just like a function defined
+    #   out of a class scope, but has a merit in being overridable.
+    #   http://mojix.org/2012/07/21/python-staticmethod
+    @staticmethod
+    def PrintWithOne(s):
+        print(s, ' 1')
         
 if __name__ == '__main__':
 
@@ -55,3 +62,4 @@ if __name__ == '__main__':
     print(Widget.classVal)
     print(Widget.number)
     
+    Widget.PrintWithOne('Hello')
