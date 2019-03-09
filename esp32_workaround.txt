@@ -1,0 +1,8 @@
+toolchain was downloaded from:
+https://docs.espressif.com/projects/esp-idf/en/latest/get-started/windows-setup.html
+
+setup was done according to:
+https://qiita.com/rukihena/items/d226972972a360fc2648
+
+make menuconfig doesn't work:
+https://github.com/espressif/esp-idf/issues/1703
