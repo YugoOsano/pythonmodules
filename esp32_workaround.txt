@@ -6,3 +6,13 @@ https://qiita.com/rukihena/items/d226972972a360fc2648
 
 make menuconfig doesn't work:
 https://github.com/espressif/esp-idf/issues/1703
+
+to check default serial port:
+launch the device manager 
+-> initially no device driver for Silicon Labs CP210x USB to UART bridge
+-> update the driver
+-> then the port number will be automatically assigned (COM3)  
+
+kind document on setup of ESP-IDF on Windows
+https://gourmet-technology-crypto.jp/%e6%8a%80%e8%a1%93/esp32%e3%81%ae%e9%96%8b%e7%99%ba%e7%92%b0%e5%a2%83esp-idf%e3%82%92windows%e3%81%ab%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b/
+
