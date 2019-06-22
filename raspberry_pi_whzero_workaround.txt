@@ -1,0 +1,11 @@
+write a image of Raspbian OS
+
+https://toripiyo.hatenablog.com/entry/2018/05/05/122758
+(though this is for Mac)
+
+download an image etcher from: 
+https://sourceforge.net/projects/win32diskimager/
+
+Windows needs a device driver:
+https://qiita.com/msquare33/items/dc6fc9098f50d9b9dbf2
+
