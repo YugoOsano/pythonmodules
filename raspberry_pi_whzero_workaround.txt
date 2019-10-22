@@ -9,3 +9,5 @@ https://sourceforge.net/projects/win32diskimager/
 Windows needs a device driver:
 https://qiita.com/msquare33/items/dc6fc9098f50d9b9dbf2
 
+USB connection by Japanese Raspberry Pi user group
+https://www.raspi.jp/2016/07/pizero-usb-otg/
