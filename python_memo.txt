@@ -1,3 +1,9 @@
+2019/10/22
 installing Python3.7
 took Method 2 in:
 https://websiteforstudents.com/installing-the-latest-python-3-7-on-ubuntu-16-04-18-04/
+
+install Anaconda on WSL
+https://gist.github.com/kauffmanes/5e74916617f9993bc3479f401dfec7da
+(did till 6)
+
