@@ -7,3 +7,11 @@ install Anaconda on WSL
 https://gist.github.com/kauffmanes/5e74916617f9993bc3479f401dfec7da
 (did till 6)
 
+2019/11/17
+#reload module (softmax as an example)
+# https://stackoverflow.com/questions/437589/how-do-i-unload-reload-a-module
+from importlib import reload
+import softmax
+softmax = reload(softmax)
+
+
