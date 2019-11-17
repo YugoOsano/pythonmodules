@@ -14,4 +14,17 @@ from importlib import reload
 import softmax
 softmax = reload(softmax)
 
+#install pip/ipython3 on WSL
+# https://medium.com/@rhdzmota/python-development-on-the-windows-subsystem-for-linux-wsl-17a0fa1839d
+sudo apt-get install python3-pip
+sudo apt-get install ipython3
+sudo apt-get install python3-tk
+
+https://askubuntu.com/questions/765494/how-to-install-numpy-for-python3
+sudo pip3 install numpy
+sudo pip3 install --upgrade pip
+sudo pip3 install matplotlib
+
+# shell not shown after matplotlib graph output
+https://stackoverflow.com/questions/9101800/emacs-python-inferior-shell-not-showing-prompt-after-matplotlib-show-command
 
