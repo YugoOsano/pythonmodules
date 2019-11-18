@@ -28,3 +28,6 @@ sudo pip3 install matplotlib
 # shell not shown after matplotlib graph output
 https://stackoverflow.com/questions/9101800/emacs-python-inferior-shell-not-showing-prompt-after-matplotlib-show-command
 
+from matplotlib import pyplot as plt
+plt.ion() # interactive mode on
+plt.plt([1,2,4])
