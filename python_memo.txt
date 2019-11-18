@@ -22,6 +22,7 @@ sudo apt-get install python3-tk
 
 https://askubuntu.com/questions/765494/how-to-install-numpy-for-python3
 sudo pip3 install numpy
+sudo pip3 install scipy
 sudo pip3 install --upgrade pip
 sudo pip3 install matplotlib
 
@@ -31,3 +32,16 @@ https://stackoverflow.com/questions/9101800/emacs-python-inferior-shell-not-show
 from matplotlib import pyplot as plt
 plt.ion() # interactive mode on
 plt.plt([1,2,4])
+
+# auto reload modules to IPython
+# http://sandmark.hateblo.jp/entry/2017/10/22/180000
+ipython profile create
+-> profile files will come up at ~/.python/
+
+# IPython config setting
+# https://ipython.readthedocs.io/en/stable/config/intro.html
+# import modules on startup
+c.InteractiveShellApp.exec_lines = [
+    'import numpy',
+    'import scipy'
+]
