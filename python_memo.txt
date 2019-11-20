@@ -19,6 +19,7 @@ softmax = reload(softmax)
 sudo apt-get install python3-pip
 sudo apt-get install ipython3
 sudo apt-get install python3-tk
+sudo apt install python3-ipdb
 
 https://askubuntu.com/questions/765494/how-to-install-numpy-for-python3
 sudo pip3 install numpy
@@ -45,3 +46,10 @@ c.InteractiveShellApp.exec_lines = [
     'import numpy',
     'import scipy'
 ]
+
+# specify float as a variable's type
+myfloat = 7.0
+or
+myfloat = float(7)
+
+
