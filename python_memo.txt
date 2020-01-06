@@ -68,3 +68,8 @@ explorer.exe .
 
 # convert a Notebook to Python code
 ipython nbconvert [filename].ipynb --to=python
+
+# pickle/unpickle Pandas dataframe
+# https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_pickle.html
+df.to_pickle("./iris.pkl")
+df.read_pickle("./iris.pkl")
