@@ -69,3 +69,6 @@ if __name__ == '__main__':
     print(Widget.number)
     
     Widget.PrintWithOne('Hello')
+
+    # raise is used for exception handling
+    raise ValueError("value error")
