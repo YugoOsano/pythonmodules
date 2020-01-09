@@ -32,6 +32,9 @@ class Widget(object):
         print("Private method.")
 
     #-- class method --
+    #   classmethod is often used
+    #   when the class is supposed to be imported
+    #   as those methods are easily called by a single import statement.
     @classmethod
     def SelfName(cls):
         # class member variable can be defined also herein
@@ -41,6 +44,9 @@ class Widget(object):
     #   a static method is just like a function defined
     #   out of a class scope, but has a merit in being overridable.
     #   http://mojix.org/2012/07/21/python-staticmethod
+    #   classmethod and staticmethod are similar but different in
+    #   usage of entity; classmethod has a reference to
+    #   a class object as the first parameter (StackOverFlow 12179271)
     @staticmethod
     def PrintWithOne(s):
         print(s, ' 1')
