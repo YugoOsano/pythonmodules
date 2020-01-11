@@ -21,7 +21,8 @@ print (next(it)) # 2
 print (next(it)) # 3
 print (next(it)) # 4
 #print (next(it)) # error / it's hard to detect the last
-
+#note: Equivalent C++ to Python generator pattern
+#      is answered in StackOverFlow 9059187
 
 # https://docs.python.org/ja/3/library/tracemalloc.html
 snapshot = tracemalloc.take_snapshot()
