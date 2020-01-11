@@ -1,0 +1,34 @@
+# Python 3.4 or newer
+# export  PYTHONTRACEMALLOC=1 is needed before run
+import tracemalloc
+tracemalloc.start()
+
+# generator practiced with Introducing Python by Oreilly
+def my_range(first=0, last=10, step=1):
+    number = first
+    while number < last:
+        yield number
+        number += step
+
+# generator object is generated
+ranger = my_range(1,5)
+
+it = iter(ranger)
+
+print (it)       # nothing comes out
+print (next(it)) # 1
+print (next(it)) # 2
+print (next(it)) # 3
+print (next(it)) # 4
+#print (next(it)) # error / it's hard to detect the last
+
+
+# https://docs.python.org/ja/3/library/tracemalloc.html
+snapshot = tracemalloc.take_snapshot()
+top_stats = snapshot.statistics('lineno')
+
+print("[ Top 1 ]")
+for stat in top_stats[:1]:
+    print(stat)
+
+
