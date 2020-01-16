@@ -11,6 +11,9 @@ def show(img):
     ax1.imshow(img, cmap=plt.cm.gray)
     ax1.set_axis_off()
 
+    # numpy.ravel() or flatten() function returns one-dimensional array
+    # made from all elements of the original multi-dimensional array;
+    # a view is returned by ravel() while a copy is returned by flatten().
     ax2.hist(img.ravel(), lw=0, bins=256)
     ax2.set_xlim(0, img.max())
     ax2.set_yticks([])
