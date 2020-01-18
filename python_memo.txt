@@ -38,6 +38,9 @@ from matplotlib import pyplot as plt
 plt.ion() # interactive mode on
 plt.plt([1,2,4])
 
+# for inline plot on Jupyter Notebook, type
+# %matplotlib inline
+
 # auto reload modules to IPython
 # http://sandmark.hateblo.jp/entry/2017/10/22/180000
 ipython profile create
@@ -50,6 +53,9 @@ c.InteractiveShellApp.exec_lines = [
     'import numpy',
     'import scipy'
 ]
+# IPython online manual is available;
+# what follows is about %run magic command
+https://ipython.org/ipython-doc/3/interactive/magics.html?highlight=run#magic-run
 
 # specify float as a variable's type
 myfloat = 7.0
