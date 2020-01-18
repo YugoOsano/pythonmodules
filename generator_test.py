@@ -35,6 +35,15 @@ total = itertools.accumulate(test_list)
 for i in range(len(test_list)):
     print (next(total))
 
+# simplest list comprehension;
+# every element doubled ([2,4,6,8,10])
+doubled_list = [2*x for x in test_list]
+print ("doubled list: ", doubled_list)
+
+# list comprehension with itertools
+accumulated_list = [x for x in itertools.accumulate(test_list)]
+print ("accumulated list: ", accumulated_list)
+
 # https://docs.python.org/ja/3/library/tracemalloc.html
 snapshot = tracemalloc.take_snapshot()
 top_stats = snapshot.statistics('lineno')
