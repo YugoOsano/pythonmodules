@@ -56,6 +56,9 @@ c.InteractiveShellApp.exec_lines = [
 # IPython online manual is available;
 # what follows is about %run magic command
 https://ipython.org/ipython-doc/3/interactive/magics.html?highlight=run#magic-run
+# to rerun only wanted lines in a existing script:
+%cat -n [file] # to browse lines to run
+%load -r 29,33 [file] # line numbers after -r
 
 # specify float as a variable's type
 myfloat = 7.0
