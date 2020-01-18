@@ -30,6 +30,11 @@ test_list = [1,2,3,4,5]
 rit = reversed(test_list)
 print ("reversed + next applied: ", next(rit))
 
+import itertools
+total = itertools.accumulate(test_list)
+for i in range(len(test_list)):
+    print (next(total))
+
 # https://docs.python.org/ja/3/library/tracemalloc.html
 snapshot = tracemalloc.take_snapshot()
 top_stats = snapshot.statistics('lineno')
