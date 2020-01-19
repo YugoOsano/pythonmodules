@@ -82,3 +82,16 @@ ipython nbconvert [filename].ipynb --to=python
 # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_pickle.html
 df.to_pickle("./iris.pkl")
 df.read_pickle("./iris.pkl")
+
+# memo about IPython on Windows Powershell
+path check: Get-Command python (which on linux)
+path setting:
+control panel -> system & security -> system -> fine setting ->
+C:\Users\[User name]\Anaconda3\Scripts
+
+On PowerShell:
+conda install tqdm -f
+# see: https://software.intel.com/en-us/forums/intel-distribution-for-python/topic/814201
+conda update conda
+conda update ipython
+** conda stacked perhaps by conflict of old/new Anaconda.
