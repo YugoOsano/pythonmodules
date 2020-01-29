@@ -31,3 +31,9 @@ then
 else
     while read l; do echo $l; done < $1
 fi
+
+# glibc version
+ldd --version
+
+# list only for directory
+ls -l | grep '^d'
