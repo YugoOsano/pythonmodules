@@ -29,7 +29,17 @@ if [ $# -eq 0 ]
 then
     echo 'No argument'
 else
-    while read l; do echo $l; done < $1
+    # array in bash
+    declare -a string_list
+    while read l
+    do
+	# if the initial word in a line containing lower case alphabet,
+	# the word will be appended to string_list.
+	a=$(echo $l | awk '{if($1 ~ /[a-z]/) print $1}')
+	string_list+=($a)
+    done < $1
+    echo ${#string_list[@]} # the number of element in string_list
+    echo ${string_list[@]} # all elements concatenated
 fi
 
 # glibc version
