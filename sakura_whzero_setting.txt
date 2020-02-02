@@ -4,6 +4,10 @@ https://console.cloud.google.com/
 Select Compute engine -> VM instance from left panel
 Click the instance name to move to setting page
 -> Press [Edit] (with pen icon) to update the setting
+-> update ssh public key (typically copy & paste id_rsa.pub)
+
+ssh to log into the instance:
+ssh -i ./.ssh/id_rsa [user name registered in id_rsa.pub]@[external IP]
 
 gcloud log is stored at:
 ~/.config/gcloud/logs/...
