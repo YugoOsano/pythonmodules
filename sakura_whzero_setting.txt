@@ -14,6 +14,18 @@ gcloud log is stored at:
 
 update gcloud
 sudo /home/yugo/software/google-cloud-sdk/bin/gcloud components update
+
+
+[package install]
+
+https://linuxize.com/post/how-to-install-gcc-compiler-on-debian-10/
+sudo apt install build-essential (gcc6)
+
+how to get package unfound by apt
+https://qiita.com/kon_yu/items/8ac350f3951f8534c931
+sudo apt install apt-file
+sudo apt-file update
+sudo apt-get install -y software-properties-common
 --------------------------------
 Sakura VPS setting
 Control panel
