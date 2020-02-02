@@ -1,3 +1,35 @@
+Google Cloud Platform
+https://console.cloud.google.com/
+
+Select Compute engine -> VM instance from left panel
+Click the instance name to move to setting page
+-> Press [Edit] (with pen icon) to update the setting
+
+gcloud log is stored at:
+~/.config/gcloud/logs/...
+
+update gcloud
+sudo /home/yugo/software/google-cloud-sdk/bin/gcloud components update
+--------------------------------
+Sakura VPS setting
+Control panel
+https://secure.sakura.ad.jp/vps/#/login
+
+reinstall OS:
+select server on the control panel
+->mis. setting button->OS install
+-> standard OS (from CentOS 6,7 on x86_64, Ubuntu16, 18 on amd64)
+-> Ubuntu 18 (admin user name is automatically set as 'ubuntu')
+-> port permission: left as default
+
+remove known hosts from ssh-key by
+ssh-keygen -f "/home/yugo/.ssh/known_hosts" -R [ip address]
+
+Initial setting guide of Sakura VPS
+https://help.sakura.ad.jp/206208181/
+
+installed: eigen3.3.7 gcc-8.3.0 cmake llvm
+----------------------------
 write a image of Raspbian OS
 
 https://toripiyo.hatenablog.com/entry/2018/05/05/122758
