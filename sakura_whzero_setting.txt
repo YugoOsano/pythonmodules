@@ -59,3 +59,19 @@ https://qiita.com/msquare33/items/dc6fc9098f50d9b9dbf2
 
 USB connection by Japanese Raspberry Pi user group
 https://www.raspi.jp/2016/07/pizero-usb-otg/
+---------------------------
+[tmux] memo
+$tmux -> :new (start a new session)
+$tmux ls      (show all session)
+$tmux kill-ses -t [number of session] (delete session)
+
+[Ctrl + b] ->
+? (show key bind list) -> q to quit
+s (show all session)
+c (new window)
+w (show all window)
+& (delete window)
+" (split pain holizontally)
+% (split pain vertically)
+cursor (move pain)
+see "minimum lesson of tmux": https://qiita.com/nl0_blu/items/9d207a70ccc8467f7bab
