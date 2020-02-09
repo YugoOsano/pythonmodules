@@ -95,3 +95,21 @@ conda install tqdm -f
 conda update conda
 conda update ipython
 ** conda stacked perhaps by conflict of old/new Anaconda.
+
+# systemctl can't be used in WSL, service is used instead
+https://www.hobbby.net/pc/windows/post-422/
+
+# Java update
+# https://qiita.com/takilog/items/43a2891756c6015aa2ee
+wget https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/openjdk-13.0.2_linux-x64_bin.tar.gz
+
+tar xzvf openjdk-13.0.2_linux-x64_bin.tar.gz
+sudo mv jdk-13.0.2 /usr/local/lib
+sudo update-alternatives --install /usr/bin/javac javac /usr/local/lib/jdk-13.0.2/bin/java 13
+sudo update-alternatives --install /usr/bin/java java /usr/local/lib/jdk-13.0.2/bin/java 13
+# /usr/local/lib/jdk-13.0.2/以下のjavac/javaを利用
+sudo update-alternatives --config javac
+sudo update-alternatives --config java
+
+# elasticsearch install according to
+https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html
