@@ -47,3 +47,9 @@ ldd --version
 
 # list only for directory
 ls -l | grep '^d'
+
+# overwrite a bash command in .bashrc
+# https://stackoverflow.com/questions/25399079/how-to-overwrite-a-bash-command
+function echo() {
+    command echo 'hello' $1;
+}
