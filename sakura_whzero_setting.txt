@@ -27,6 +27,20 @@ sudo apt install apt-file
 sudo apt-file update
 sudo apt-get install -y software-properties-common
 
+connect Github:
+see https://qiita.com/shizuma/items/2b2f873a0034839e47ce
+ssh-keygen -t rsa
+here, -t for encrypt type (RSA)
+pass phrase can be skipped
+
+Open the Github key setting page:
+https://github.com/settings/keys
+and press NewSSH key button
+copy and paste all text in id_rsa.pub
+
+To verify authentification,
+ssh -T git@github.com
+
 [docker]
 https://cloud.google.com/compute/docs/containers
 https://docs.docker.com/install/linux/docker-ce/debian/
