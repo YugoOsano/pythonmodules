@@ -41,6 +41,13 @@ copy and paste all text in id_rsa.pub
 To verify authentification,
 ssh -T git@github.com
 
+Create .gitconfig file at home directory and write email and name
+(reference the existing one) to issue an initial commit.
+
+git clone [url of one of my own repository]
+open ./.git/config and rewrite the url value:
+url = git@github.com:YugoOsano/cppmemo.git
+
 [docker]
 https://cloud.google.com/compute/docs/containers
 https://docs.docker.com/install/linux/docker-ce/debian/
