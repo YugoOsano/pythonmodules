@@ -27,6 +27,12 @@ sudo apt install apt-file
 sudo apt-file update
 sudo apt-get install -y software-properties-common
 
+to search package:
+apt-cache pkgnames | grep [any name]
+
+[install memo]
+libboost-all-dev
+
 connect Github:
 see https://qiita.com/shizuma/items/2b2f873a0034839e47ce
 ssh-keygen -t rsa
