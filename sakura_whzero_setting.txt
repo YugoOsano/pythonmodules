@@ -33,6 +33,13 @@ apt-cache pkgnames | grep [any name]
 apt repository addition/removal
 https://askubuntu.com/questions/307/how-can-ppas-be-removed
 
+to install latest packages like gcc-8:
+insert the following to /etc/apt/sources.list
+deb http://ftp.debian.org/debian stable main contrib non-free
+and run:
+sudo apt update
+see https://wiki.debian.org/DebianRepository
+
 [install memo]
 libboost-all-dev
 
