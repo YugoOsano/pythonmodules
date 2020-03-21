@@ -30,6 +30,9 @@ sudo apt-get install -y software-properties-common
 to search package:
 apt-cache pkgnames | grep [any name]
 
+apt repository addition/removal
+https://askubuntu.com/questions/307/how-can-ppas-be-removed
+
 [install memo]
 libboost-all-dev
 
@@ -53,6 +56,9 @@ Create .gitconfig file at home directory and write email and name
 git clone [url of one of my own repository]
 open ./.git/config and rewrite the url value:
 url = git@github.com:YugoOsano/cppmemo.git
+
+or, rewriting the url can be skipped when cloning by:
+git clone git@github.com:YugoOsano/cppmemo.git
 
 [docker]
 https://cloud.google.com/compute/docs/containers
