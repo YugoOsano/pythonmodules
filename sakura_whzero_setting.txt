@@ -44,6 +44,11 @@ see https://wiki.debian.org/DebianRepository
 [install memo]
 libboost-all-dev gcc-8-multilib g++-8-multilib gdb
 
+As in Google Cloud Platform textbook:
+python-pip python-dev python-wtforms
+python-arrow python-flask-sqlalchemy
+python-pymysql python-flaskext.wtf
+
 connect Github:
 see https://qiita.com/shizuma/items/2b2f873a0034839e47ce
 ssh-keygen -t rsa
@@ -67,6 +72,23 @@ url = git@github.com:YugoOsano/cppmemo.git
 
 or, rewriting the url can be skipped when cloning by:
 git clone git@github.com:YugoOsano/cppmemo.git
+
+[web server creation]
+https://techblog.gmo-ap.jp/2019/07/08/10minutes-gce/
+select VM to edit its setting -> check permission of firewall on http
+
+install http daemon
+sudo apt install apache2 (or whichever shown by sudo apt install httpd)
+sudo systemctl start httpd.service
+
+start a web browser to open http://[external IP on VW setting page]
+
+to see status:
+sudo systemctl status httpd.service
+
+to stop
+sudo systemctl stop httpd.service
+uncheck firewall
 
 [docker]
 https://cloud.google.com/compute/docs/containers

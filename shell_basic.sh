@@ -58,3 +58,7 @@ function echo() {
 # https://askubuntu.com/questions/600018/how-to-display-the-paths-in-path-separately
 echo $PATH | tr ':' '\n'
 
+# to see the number of cpu core:
+nproc
+cat /proc/cpuinfo
+
