@@ -32,7 +32,13 @@ to search package:
 apt-cache pkgnames | grep [any name]
 
 apt repository addition/removal
+PPA stands for Personal Package Archive; it means non-standard software
 https://askubuntu.com/questions/307/how-can-ppas-be-removed
+sudo add-apt-repository ppa:[repository name]/ppa
+sudo add-apt-repository --remove ppa:[repository-name]/ppa
+
+sudo ppa-purge ppa:[repository name]/ppa
+ is safer alternative (after installing ppa-purge)
 
 to install latest packages like gcc-8:
 insert the following to /etc/apt/sources.list
@@ -50,6 +56,10 @@ sudo apt install dirmngr
 
 ghc Haskell compiler install on Debian:
 https://downloads.haskell.org/~debian/
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BA3CBA3FFE22B574
+sudo apt update
+sudo apt install ghc
+sudo apt install cabal
 
 [install memo]
 libboost-all-dev gcc-8-multilib g++-8-multilib gdb
