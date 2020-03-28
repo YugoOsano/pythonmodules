@@ -53,3 +53,8 @@ ls -l | grep '^d'
 function echo() {
     command echo 'hello' $1;
 }
+
+# line by line PATH listing
+# https://askubuntu.com/questions/600018/how-to-display-the-paths-in-path-separately
+echo $PATH | tr ':' '\n'
+
