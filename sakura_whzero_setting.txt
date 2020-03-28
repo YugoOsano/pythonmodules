@@ -41,6 +41,16 @@ and run:
 sudo apt update
 see https://wiki.debian.org/DebianRepository
 
+Debian version check:
+hostnamectl
+
+some package requires GPG signing key:
+to manage it, install dirmngr by:
+sudo apt install dirmngr
+
+ghc Haskell compiler install on Debian:
+https://downloads.haskell.org/~debian/
+
 [install memo]
 libboost-all-dev gcc-8-multilib g++-8-multilib gdb
 
@@ -89,6 +99,9 @@ sudo systemctl status httpd.service
 to stop
 sudo systemctl stop httpd.service
 uncheck firewall
+
+simplest Python web server
+https://sinyblog.com/python/simple_web_server/
 
 [docker]
 https://cloud.google.com/compute/docs/containers
