@@ -15,6 +15,13 @@ gcloud log is stored at:
 update gcloud
 sudo /home/yugo/software/google-cloud-sdk/bin/gcloud components update
 
+use of gcloud command needs authentification:
+https://qiita.com/average_nobody/items/87eb9ab434ab9d9f8637
+Simply, type
+gcloud auth login
+and follow the direction. To verify authentification, type
+gcloud compute instances list
+
 
 [package install]
 
@@ -62,12 +69,16 @@ sudo apt install ghc
 sudo apt install cabal
 
 [install memo]
-libboost-all-dev gcc-8-multilib g++-8-multilib gdb
+libboost-all-dev gcc-8-multilib g++-8-multilib gdb python3-pip (pip3 as command)
+ipython3 python3-ipdb
 
 As in Google Cloud Platform textbook:
 python-pip python-dev python-wtforms
 python-arrow python-flask-sqlalchemy
 python-pymysql python-flaskext.wtf
+
+Python modules set by pip3
+jinja2
 
 connect Github:
 see https://qiita.com/shizuma/items/2b2f873a0034839e47ce
