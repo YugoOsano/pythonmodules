@@ -70,7 +70,12 @@ sudo apt install cabal
 
 [install memo]
 libboost-all-dev gcc-8-multilib g++-8-multilib gdb python3-pip (pip3 as command)
-ipython3 python3-ipdb
+ipython3 python3-ipdb cmake
+
+dlib: machine learning library for C++/Python
+http://dlib.net/
+to install:
+sudo pip install dlib
 
 As in Google Cloud Platform textbook:
 python-pip python-dev python-wtforms
@@ -128,6 +133,11 @@ https://sinyblog.com/python/simple_web_server/
 https://cloud.google.com/compute/docs/containers
 https://docs.docker.com/install/linux/docker-ce/debian/
 
+Installing was attempted according to the following:
+https://qiita.com/yadayuki/items/ae9d9e01bad769499dec
+but was likely to fail and 'Dependency failed...' error came up on
+any apt install/remove manipulation. It was resolved by
+sudo apt autoremove docker-ce
 --------------------------------
 Sakura VPS setting
 Control panel
@@ -177,3 +187,8 @@ w (show all window)
 % (split pain vertically)
 cursor (move pain)
 see "minimum lesson of tmux": https://qiita.com/nl0_blu/items/9d207a70ccc8467f7bab
+-----------------------------
+[vim] memo
+:e [file] -> open a file in the current buffer
+:e [Ctrl+d] -> list files in the current directory
+:se enc?  -> return character encoding (UTF8)
