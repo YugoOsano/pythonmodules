@@ -61,4 +61,9 @@ echo $PATH | tr ':' '\n'
 # to see the number of cpu core:
 nproc
 cat /proc/cpuinfo
+cat /proc/version # linux kernel version
+uname -r # uname prints system info
+
+# show only specified lines in a file: 57-60th lines here
+sed -n 57,60p shell_basic.sh
 
