@@ -16,3 +16,54 @@ launch the device manager
 kind document on setup of ESP-IDF on Windows
 https://gourmet-technology-crypto.jp/%e6%8a%80%e8%a1%93/esp32%e3%81%ae%e9%96%8b%e7%99%ba%e7%92%b0%e5%a2%83esp-idf%e3%82%92windows%e3%81%ab%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b/
 
+To add IDF_PATH on opening mingw32,
+create a file:
+C:\msys32\etc\profile.d\add_IDF_PATH.sh
+
+with its text:
+export IDF_PATH="/c/esp-idf"
+
+On mingw32.exe:
+
+ESP IDF's path is verified by:
+# printenv IDF_PATH
+
+Copy an example project to the current directory:
+cp -r $IDF_PATH/examples/get-started/hello_world .
+
+on the project directory (like hello_world):
+run the setup tool by
+# make menuconfig
+
+to specify the serial port as COM3 (as shown in device manager)
+
+Therein, set serial port as
+
+/dev/COM3 (from /dev/tty...) under Serial Flasher Options.
+
+build and transfer the binary by:
+
+# make flash
+
+here, some process conflict may happen with errors of permission denied on fork, execvp, and so on.
+In such a case, close other Windows application and simply retype make flash.
+
+Message of serial port connecting.. wrote *** bytes to ... Leaving ...
+means binary transferred successfully.
+
+To see the binary running,
+
+# make monitor
+
+------------------------
+[WiFi]
+The ESP32 can act as a WiFi station; as it doesn't connect to a wired network,
+it is called soft AP (Access Point)
+
+Copy an example project to the current directory:
+cp -r $IDF_PATH/examples/wifi/getting-started/softAP .
+
+As in README.md, set SSID and password, then build by:
+# make (-j*) flash
+
+Then SSID will come up on available network from any devices.
