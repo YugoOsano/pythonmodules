@@ -67,3 +67,77 @@ As in README.md, set SSID and password, then build by:
 # make (-j*) flash
 
 Then SSID will come up on available network from any devices.
+To see the binary running,
+
+# make monitor
+
+Stop by Ctrl+H
+
+-------------------------
+[MicroPython]
+See Interface 2018/09 p-71
+
+xxx installed esptool on WSL by:
+xxx $ sudo pip3 install esptool
+-> the serial port was not recognized on WSL; worked on mingw32 instead.
+
+install verified by:
+# which esptool.py
+
+# export PORT=/dev/COM3
+# export BAUD=115200
+
+To clear the flash memory,
+# esptool.py --chip esp32 -p $PORT -b $BAUD erase_flash
+
+Go to Micropython page to download:
+http://micropython.org/download/
+
+In 2020 Sep, downloaded:
+esp32-idf3-20200902-v1.13.bin
+to the mingw current directory.
+
+Transfer this binary to esp32 by:
+# esptool.py --chip esp32 --port $PORT --baud 115200 write_flash -z 0x1000 esp32-idf3-20200902-v1.13.bin
+
+Use TeraTerm on Windows instead of picocom on Linux
+-> select Serial radio button on start
+-> Go to Setup->serial to adjust baud rate (Speed) from 9600 to 115200
+  -> Press [New Setting]
+-> Go to Setup->Termianl to change locale from japanese to english
+
+prompt >>> will be shown.
+
+To show help:
+>>> help()
+
+As in help description,
+
+>>> import network
+>>> sta_if = network.WLAN(network.STA_IF); sta_if.active(True)
+>>> sta_if.scan()                             # Scan for available access points
+>>> sta_if.connect("<AP_name>", "<password>") # Connect to an AP
+>>> sta_if.isconnected()                      # Check for successful connection
+
+will let ESP32 connect an available WiFi access point.
+
+As in tutorial on ESP with MicroPython,
+https://micropython-docs-ja.readthedocs.io/ja/latest/esp8266/tutorial/repl.html
+
+>>> import machine
+>>> pin = machine.Pin(2, machine.Pin.OUT)
+>>> pin.on()
+>>> pin.off()
+
+will let LED on GPIO2 turn on/off.
+To reference breadboard connection:
+https://westgate-lab.hatenablog.com/entry/2020/01/19/185823
+
+
+[ampy: File transfer tool on MicroPython]
+installed on mingw32 by:
+# pip install adafruit-ampy
+-> ampy couldn't connect the port perhaps due to Python version (2.7).
+   msys pacman has an issue to upgrade Python at the moment.
+
+-> upysh will be used for file transfer or etc. on TeraTerm instead.
