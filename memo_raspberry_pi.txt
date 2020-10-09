@@ -1,0 +1,4 @@
+# to change keyboard setting:
+sudo raspi-config
+# and select 4 localization
+
