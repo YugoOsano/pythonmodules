@@ -41,3 +41,11 @@ ex): brown, blue, yellow, gold: 160k +-5% Ohm
 wget https://project-downloads.drogon.net/wiringpi-latest.deb　
 sudo dpkg -i wiringpi-latest.deb
 gpio readall
+
+# in Python, on connection of No.11 pin with LED+ end,
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(17, GPIO.OUT)
+GPIO.output(17, GPIO.HIGH)
+GPIO.output(17, GPIO.LOW)
+GPIO.cleanup()
