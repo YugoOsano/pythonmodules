@@ -2,3 +2,42 @@
 sudo raspi-config
 # and select 4 localization
 
+--------------
+[pin assignment]
+# https://www.raspberrypi.org/documentation/usage/gpio/
+
+1  2  3V3 power, 5V power
+3  4  GPIO2,     5V power
+5  6  GPIO3,     Ground
+7  8  GPIO4,     GPIO 14
+9  10 Ground,    GPIO 15
+11 12 GPIO17,    GPIO 18
+
+--------------
+[resistor color code]
+# https://www.akaneohm.com/column/marking/
+
+color   1st,2nd multiplier error
+
+black   0       1
+brown   1       10
+red     2       10^2
+orange  3       10^3
+yellow  4       10^4
+green   5       10^5
+blue    6       10^6
+violet  7       10^7
+gray    8
+white   9       0.001
+gold            0.1        +-5%
+silver          0.01       +-10%
+
+ex): brown, blue, yellow, gold: 160k +-5% Ohm
+     orange, orange, brown, gold: 330 +-5% Ohm
+-------------------------------------
+[LED blink]
+# https://qiita.com/umet787X/items/5d760c3b23677983ba1d
+# install wiringpi (needed on Raspberry pi 4)
+wget https://project-downloads.drogon.net/wiringpi-latest.deb　
+sudo dpkg -i wiringpi-latest.deb
+gpio readall
