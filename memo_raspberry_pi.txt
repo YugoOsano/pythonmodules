@@ -31,7 +31,6 @@ gray    8
 white   9       0.001
 gold            0.1        +-5%
 silver          0.01       +-10%
-
 ex): brown, blue, yellow, gold: 160k +-5% Ohm
      orange, orange, brown, gold: 330 +-5% Ohm
 -------------------------------------
@@ -49,3 +48,16 @@ GPIO.setup(17, GPIO.OUT)
 GPIO.output(17, GPIO.HIGH)
 GPIO.output(17, GPIO.LOW)
 GPIO.cleanup()
+--------------------------------
+[connect from Windows PC via LAN cable/ssh]
+# https://qiita.com/mascii/items/7d955395158d4231aef6
+
+# enable ssh on Raspberry pi 4
+# https://qiita.com/positive_023/items/64e33d9493601591cc43
+-------------------------------
+[Run GPU by OpenCL]
+# https://predator.hateblo.jp/entry/2020/05/09/015729
+
+# the official site is:
+# https://abhitronix.github.io/2019/01/15/VC4CL-1/
+gave up for an error about Logger during sudo make at VC4CL directory.
