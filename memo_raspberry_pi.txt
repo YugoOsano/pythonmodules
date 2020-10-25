@@ -2,6 +2,9 @@
 sudo raspi-config
 # and select 4 localization
 
+# Japanese input
+# installed fcitx-mozc
+# https://rpi.edu2web.com/2018/05/20/pixel-4-japanese-input/
 --------------
 [pin assignment]
 # https://www.raspberrypi.org/documentation/usage/gpio/
@@ -61,3 +64,10 @@ GPIO.cleanup()
 # the official site is:
 # https://abhitronix.github.io/2019/01/15/VC4CL-1/
 gave up for an error about Logger during sudo make at VC4CL directory.
+------------------------------
+[Docker]
+# installed on:
+# https://phoenixnap.com/kb/docker-on-raspberry-pi
+# work on "Sub-process error"
+# in running a script by: sudo sh get-docker.sh
+# https://qiita.com/yhoriuc1/items/49085aea0fa2ea5cb933
