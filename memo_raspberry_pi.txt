@@ -75,6 +75,16 @@ gave up for an error about Logger during sudo make at VC4CL directory.
 [OpenGL]
 # Modern OpenGL on Raspberry Pi
 # https://raspberrypi.stackexchange.com/questions/75071/running-modern-opengl-on-raspberry-pi
+# setting done by: sudo raspi-config -> Advanced options -> setting GL driver
+sudo apt-get install mesa-utils
+glxgears
+# source code of glxgears can be cloned from:
+# https://github.com/davidanthonygardner/glxgears
+# requiring several libraries for development on OpenGL (such as GLEW)
+# to search related packages:
+# apt-cache search ****
+# *** connection errors at the moment upon attempt to install by:
+# sudo apt-get install ****
 -----
 [create desktop shortcut]
 # https://www.geeks3d.com/20191122/how-to-create-a-shortcut-on-the-raspbian-desktop/
