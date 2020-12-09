@@ -61,3 +61,12 @@ GPIO.cleanup()
 # the official site is:
 # https://abhitronix.github.io/2019/01/15/VC4CL-1/
 gave up for an error about Logger during sudo make at VC4CL directory.
+
+----------------------------
+[ST Micro Nucleo]
+# prepare development environment for STM32 on PC
+# https://researchmap.jp/blogs/blog_entries/view/96639/18583f6e4eec08be885461cccdda5b3b
+
+# download the driver STSW-LINK009 of Nucleo from:
+# https://my.st.com/content/my_st_com/ja/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.html
+

@@ -29,8 +29,12 @@ if [ $# -eq 0 ]
 then
     echo 'No argument'
 else
-    # array in bash
+    # array in bash (variable type can be specified by declare)
     declare -a string_list
+    # while read line ('line' can be replaced by any variable)
+    # is a standard usage
+    # done < $1 means this loop reads text from the file of 1st argument
+    # https://shellscript.sunone.me/while.html
     while read l
     do
 	# if the initial word in a line containing lower case alphabet,
