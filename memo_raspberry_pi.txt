@@ -2,6 +2,9 @@
 sudo raspi-config
 # and select 4 localization
 
+# Japanese input
+# installed fcitx-mozc
+# https://rpi.edu2web.com/2018/05/20/pixel-4-japanese-input/
 --------------
 [pin assignment]
 # https://www.raspberrypi.org/documentation/usage/gpio/
@@ -69,4 +72,45 @@ gave up for an error about Logger during sudo make at VC4CL directory.
 
 # download the driver STSW-LINK009 of Nucleo from:
 # https://my.st.com/content/my_st_com/ja/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.html
+
+------------------------------
+[Docker]
+# installed on:
+# https://phoenixnap.com/kb/docker-on-raspberry-pi
+# work on "Sub-process error"
+# in running a script by: sudo sh get-docker.sh
+# https://qiita.com/yhoriuc1/items/49085aea0fa2ea5cb933
+-----
+[OpenGL]
+# Modern OpenGL on Raspberry Pi
+# https://raspberrypi.stackexchange.com/questions/75071/running-modern-opengl-on-raspberry-pi
+# setting done by: sudo raspi-config -> Advanced options -> setting GL driver
+sudo apt-get install mesa-utils
+glxgears
+# source code of glxgears can be cloned from:
+# https://github.com/davidanthonygardner/glxgears
+# requiring several libraries for development on OpenGL (such as GLEW)
+# to search related packages:
+# apt-cache search ****
+# *** connection errors at the moment upon attempt to install by:
+# sudo apt-get install ****
+-----
+[create desktop shortcut]
+# https://www.geeks3d.com/20191122/how-to-create-a-shortcut-on-the-raspbian-desktop/
+# create a file named ***.desktop at ~/Desktop/ directory
+# with content as follows:
+[Desktop Entry]
+Version=1.0
+Type=Application
+Encoding=UTF-8
+Name=Gnome Terminal
+Comment=Gnome Terminal
+Icon=emblem-debian
+#Exec=/usr/bin/glxgears
+Exec=/usr/bin/gnome-terminal
+Terminal=false
+Categories=Terminal
+# Auto execute shortcut problem (stop message panel launch)
+# https://raspberrypi.stackexchange.com/questions/100679/auto-execute-desktop-shortcut-problem
+open: ~$ pcmanfm go to Edit/Preferences/General, Check box for "Don't ask options on launch executable file"
 
