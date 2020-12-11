@@ -2,6 +2,9 @@
 # see
 # https://www.cyberciti.biz/faq/bash-for-loop/
 
+# for debug, just run a script with:
+# bash -x [script]
+
 # space not permitted aroung equal(=)
 a=''
 for i in {1..5}
@@ -44,6 +47,25 @@ else
     done < $1
     echo ${#string_list[@]} # the number of element in string_list
     echo ${string_list[@]} # all elements concatenated
+fi
+
+# reduce line feed
+if [ $# -eq 0 ]
+then
+    echo 'No argument'
+else
+    out=''
+    counter=1
+    while read line
+    do
+	out=$out$line
+	if (($counter % 7 == 0))
+	then
+	    echo $out
+	    out=''
+	fi
+	counter=$((counter+1))
+    done < $1
 fi
 
 # glibc version
