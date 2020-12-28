@@ -52,4 +52,9 @@ print("[ Top 1 ]")
 for stat in top_stats[:1]:
     print(stat)
 
-
+# comprehension for zipped lists
+# -> convert it to dict
+listzipped = [(x,y) for x,y in zip(test_list, test_list)]
+print ("list of tuples: ", listzipped)
+d = dict(listzipped)
+print ("converted dict: ", d)
