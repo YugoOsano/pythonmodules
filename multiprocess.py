@@ -18,7 +18,7 @@ ncore = multiprocessing.cpu_count()
 
 # Popen starts the execution of a command
 for i in range (ncore):
-    proc = subprocess.Popen(['./process_id_get.py'],shell=True)
+    proc = subprocess.Popen(['./subdirectory_crawl.py'],shell=True)
     procs.append(proc)
 
 # communicate waits for the termination
@@ -27,3 +27,10 @@ for proc in procs:
 
 end=time()
 print("%f sec" %(end-start))
+
+# subprocess.call is used to simply run shell commands;
+# it is better than os.system as stoppable by Ctrl+C
+# https://methane.hatenablog.jp/entry/20110509/1304956974
+print("--- test of subprocess.call ---")
+cmd = "grep -n process *.py"
+subprocess.call(cmd, shell=True)
