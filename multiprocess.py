@@ -34,3 +34,7 @@ print("%f sec" %(end-start))
 print("--- test of subprocess.call ---")
 cmd = "grep -n process *.py"
 subprocess.call(cmd, shell=True)
+
+# check_output returns stdout as a string
+s = subprocess.check_output(cmd, shell=True)
+print(s)

@@ -113,3 +113,12 @@ sudo update-alternatives --config java
 
 # elasticsearch install according to
 https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html
+
+# determine executable or not in a git repository
+git ls-tree HEAD
+will return:
+100644 blob b0caffecae121c6914be5f89ac708a756c254edd    TitanicTrialWithTutorial.py
+100755 blob da9e5d07ce0e130b8630c49edca53699fe81ad0f    bayes_inference_beginning.py
+100644 blob 839ea25204e5f4d89ea65646d6f6474ee801b43a    class_member.py
+Here, those headed with 100755 are executable.
+https://stackoverflow.com/questions/50032989/how-can-i-determine-whether-a-file-in-git-is-executable
