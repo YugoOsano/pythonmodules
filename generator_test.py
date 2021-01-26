@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # Python 3.4 or newer
 # export  PYTHONTRACEMALLOC=1 is needed before run
 import tracemalloc
@@ -58,3 +59,7 @@ listzipped = [(x,y) for x,y in zip(test_list, test_list)]
 print ("list of tuples: ", listzipped)
 d = dict(listzipped)
 print ("converted dict: ", d)
+
+print("--loop over dict--")
+for key in d:
+    print (key, d[key])
