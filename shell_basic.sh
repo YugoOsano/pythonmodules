@@ -74,6 +74,15 @@ ldd --version
 # list only for directory
 ls -l | grep '^d'
 
+# temporary files (removed on script's end)
+echo '---- demo of temporary file ---'
+TMP1=`mktemp`
+echo 'aaa' > $TMP1
+TMP2=`mktemp`
+echo 'bbb' > $TMP2
+diff $TMP1 $TMP2
+echo
+
 # overwrite a bash command in .bashrc
 # https://stackoverflow.com/questions/25399079/how-to-overwrite-a-bash-command
 function echo() {
@@ -92,4 +101,3 @@ uname -r # uname prints system info
 
 # show only specified lines in a file: 57-60th lines here
 sed -n 57,60p shell_basic.sh
-
