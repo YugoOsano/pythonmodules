@@ -38,3 +38,22 @@ subprocess.call(cmd, shell=True)
 # check_output returns stdout as a string
 s = subprocess.check_output(cmd, shell=True)
 print(s)
+
+# have to pay attention to exit status when using subprocess
+# How do I see exit status of the command?
+# $ (any command)
+# $ echo $?
+# https://bash.cyberciti.biz/guide/The_exit_status_of_a_command
+s=""
+try:
+    # this is equivalent to check_output (run is recommended)
+    # https://docs.python.org/3/library/subprocess.html#call-function-trio
+    s = subprocess.run(('diff', 'test_unittest.py', 'create_HDF5.py'),\
+                       check=True, stdout=subprocess.PIPE).stdout
+except subprocess.CalledProcessError as e:
+    print("--- came to exception ---")
+    # https://docs.python.org/3/library/subprocess.html#subprocess.CalledProcessError
+    print("return code: ", e.returncode) # 1 when there is difference, 2 when no file
+    print(e.output)
+    #exit()
+print(s)
