@@ -1,4 +1,6 @@
+#!/usr/bin/python3
 # https://qiita.com/0xfffffff7/items/6ef16e79fe9886acb3f2
+import typing
 
 class Widget(object):
 
@@ -50,7 +52,11 @@ class Widget(object):
     @staticmethod
     def PrintWithOne(s):
         print(s, ' 1')
-        
+
+def wrap_pass(): pass
+def accept_function(f=wrap_pass):
+    f()
+
 if __name__ == '__main__':
 
     w = Widget(2,4)
@@ -71,4 +77,10 @@ if __name__ == '__main__':
     Widget.PrintWithOne('Hello')
 
     # raise is used for exception handling
-    raise ValueError("value error")
+    #raise ValueError("value error")
+
+    # function object practice
+    def print_hello(): print("Hello function object")
+
+    accept_function(print_hello)
+    accept_function()

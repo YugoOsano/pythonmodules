@@ -52,8 +52,9 @@ try:
                        check=True, stdout=subprocess.PIPE).stdout
 except subprocess.CalledProcessError as e:
     print("--- came to exception ---")
+    #import pdb; pdb.set_trace()
     # https://docs.python.org/3/library/subprocess.html#subprocess.CalledProcessError
     print("return code: ", e.returncode) # 1 when there is difference, 2 when no file
-    print(e.output)
+    print(e.output) # type is 'bytes'
     #exit()
 print(s)
