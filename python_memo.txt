@@ -122,3 +122,10 @@ will return:
 100644 blob 839ea25204e5f4d89ea65646d6f6474ee801b43a    class_member.py
 Here, those headed with 100755 are executable.
 https://stackoverflow.com/questions/50032989/how-can-i-determine-whether-a-file-in-git-is-executable
+
+# venv (see Python Jissen Nyumon p-264)
+sudo apt-get update
+sudo apt-get install python3-venv (took several minutes)
+# at a temporary directory
+# (-m stands for module)
+python3 -m venv venv
