@@ -129,3 +129,8 @@ sudo apt-get install python3-venv (took several minutes)
 # at a temporary directory
 # (-m stands for module)
 python3 -m venv venv
+
+# temporary file
+# mktemp
+# https://www.tutorialspoint.com/unix_commands/mktemp.htm
+
