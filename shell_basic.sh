@@ -25,7 +25,11 @@ echo $h | awk '{print $1}' # hello
 echo $h | awk '{print $2}' # world
 
 hc='hello,world'
-echo $hc | awk -F',' '{print $1}' #specify separating character
+#specify separating character by -F option
+echo $hc | awk -F',' '{print $1}'
+
+# OS version check (16.04.6 is taken to be 16.046)
+grep -i version /etc/os-release | sed 's/[^0-9.]//g' | awk '$1>16{print $1}'
 
 # read file; $# is the number of argument (see StackOverFlow6482377)
 if [ $# -eq 0 ]
