@@ -46,15 +46,25 @@ print(s)
 # https://bash.cyberciti.biz/guide/The_exit_status_of_a_command
 s=""
 try:
-    # this is equivalent to check_output (run is recommended)
+    # this is equivalent to check_output
+    # The recommended approach is to use the run() function for all use cases
     # https://docs.python.org/3/library/subprocess.html#call-function-trio
     s = subprocess.run(('diff', 'test_unittest.py', 'create_HDF5.py'),\
                        check=True, stdout=subprocess.PIPE).stdout
 except subprocess.CalledProcessError as e:
     print("--- came to exception ---")
-    #import pdb; pdb.set_trace()
     # https://docs.python.org/3/library/subprocess.html#subprocess.CalledProcessError
     print("return code: ", e.returncode) # 1 when there is difference, 2 when no file
     print(e.output) # type is 'bytes'
     #exit()
 print(s)
+
+print ("------------------")
+try:
+    s = subprocess.run(('./exit1'),\
+                       check=True, stdout=subprocess.PIPE).stdout
+except subprocess.CalledProcessError as e:
+    print("--- exit1 exception ---")
+    #import pdb; pdb.set_trace()
+    print("return code: ", e.returncode)# type is int
+    print(e.output)
