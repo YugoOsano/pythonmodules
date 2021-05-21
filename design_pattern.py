@@ -27,3 +27,13 @@ class F:
 #f = F() # error
 f = F('hoge')
 f(5)
+
+# like C/C++ struct (Stackoverflow 35988)
+from collections import namedtuple
+MyStruct = namedtuple("MyStruct", "x y z is_exist")
+
+m = MyStruct(1,3,4,True)
+print(m)
+print(m.x, m.is_exist)
+# m.x = 20 # error of 'can't set attribute'
+
