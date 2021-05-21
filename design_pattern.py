@@ -11,10 +11,36 @@ def factory(is_a: bool):
     if (is_a): return A()
     return B()
 
-for is_a in [True, False]:
-    c = factory(is_a)
+ablist = [factory(True),\
+          factory(False)]
+
+#for is_a in [True, False]:
+#    c = factory(is_a)
+for c in ablist:
     print(type(c))
     c.hello()
+
+# factory 2: see Stackoverflow 372042
+class SomeAbstraction:
+    pass  # lots of stuff - but missing something
+class Mixin1:
+    def something(self):
+        print("Mixin1")  # one implementation
+class Mixin2:
+    def something(self):
+        print("Mixin2")  # another
+class Concrete1(SomeAbstraction, Mixin1):
+    pass
+class Concrete2(SomeAbstraction, Mixin2):
+    pass
+
+def factory_with_abstraction(is1: bool)->SomeAbstraction:
+    if (is1): return Concrete1()
+    return           Concrete2()
+
+conclist = [factory_with_abstraction(True),\
+            factory_with_abstraction(False)]
+[conc.something() for conc in conclist]
 
 # functor
 class F:
