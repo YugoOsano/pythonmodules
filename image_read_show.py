@@ -4,7 +4,6 @@
 import skimage.exposure as skie
 import numpy as np
 import matplotlib.pyplot as plt
-img = plt.imread('http://github.com/ipython-books/cookbook-2nd-data/blob/master/beach.png?raw=true')[...,0]
 
 def show(img):
     fig, (ax1, ax2) = plt.subplots(1,2,figsize=(12,3))
@@ -41,5 +40,28 @@ def show(img):
     
     plt.show()
 
-show(img)
+#img = plt.imread('http://github.com/ipython-books/cookbook-2nd-data/blob/master/beach.png?raw=true')[...,0]
+#show(img)
+
+# function to read a vtk file to make histogram
+# negative value will be converted to a specified positive one
+
+# vtk file needs to have same number of values in every line as follows
+# 1 -1 0 0 2 3
+# 1 -1 -1 1 2 0
+
+def bincount_vtk(file: str,
+                 x_from_negative: int=0):
+   # import pdb; pdb.set_trace()
+    raw_ary = np.loadtxt(file)
+    ary_int = raw_ary.astype(np.int32)
+    ary1d   = ary_int.flatten()
+    arypositive = [x if x>= 0 else x_from_negative for x in ary1d]
+    bincount = np.bincount(arypositive)
+    return bincount
+
+import sys
+
+b = bincount_vtk(sys.argv[1], 5)
+print(b)
 
