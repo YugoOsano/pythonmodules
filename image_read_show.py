@@ -53,7 +53,7 @@ def show(img):
 def bincount_vtk(file: str,
                  x_from_negative: int=0):
    # import pdb; pdb.set_trace()
-    raw_ary = np.loadtxt(file)
+    raw_ary = np.loadtxt(file, comments='#')
     ary_int = raw_ary.astype(np.int32)
     ary1d   = ary_int.flatten()
     arypositive = [x if x>= 0 else x_from_negative for x in ary1d]
@@ -61,7 +61,32 @@ def bincount_vtk(file: str,
     return bincount
 
 import sys
+import subprocess
 
-b = bincount_vtk(sys.argv[1], 5)
+imagefile = sys.argv[1]
+
+b = bincount_vtk(imagefile, 5)
 print(b)
 
+line = ""
+try:
+    line = subprocess.run(('grep', 'DIMENSIONS', imagefile),\
+                          check=True, stdout=subprocess.PIPE).stdout
+except subprocess.CalledProcessError as e:
+    print("--- came to exception ---")
+    print("return code: ", e.returncode) # 1 when there is difference, 2 when no file
+    print(e.output) # type is 'bytes'
+    exit
+
+# extract only positive integers
+# transcribed from StackOverFlow 4289331
+dim = [int(s) for s in line.split() if s.isdigit()]
+print(dim)
+
+# list of str can be read by numpy loadtxt
+# (the size of arrays has to be consistent)
+c = np.loadtxt(['1 2', '10 12'])
+print(c)
+
+d = np.genfromtxt(['2 4', '20 24'])
+print(d)

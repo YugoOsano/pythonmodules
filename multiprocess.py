@@ -49,6 +49,7 @@ try:
     # this is equivalent to check_output
     # The recommended approach is to use the run() function for all use cases
     # https://docs.python.org/3/library/subprocess.html#call-function-trio
+    # return type of run is subprocess.CompletedProcess
     s = subprocess.run(('diff', 'test_unittest.py', 'create_HDF5.py'),\
                        check=True, stdout=subprocess.PIPE).stdout
 except subprocess.CalledProcessError as e:
