@@ -109,3 +109,10 @@ uname -r # uname prints system info
 
 # show only specified lines in a file: 57-60th lines here
 sed -n 57,60p shell_basic.sh
+
+# replace parameter value by sed
+# https://stackoverflow.com/questions/11245144/replace-whole-line-containing-a-string-using-sed
+# https://stackoverflow.com/questions/11146098/use-a-variable-in-a-sed-command
+echo '\n---replace parameter value by sed---'
+UPTIME=`cat /proc/uptime`
+sed "s/^VERSION.*/VERSION=$UPTIME;/g" /etc/os-release
