@@ -94,11 +94,14 @@ python-pymysql python-flaskext.wtf
 Python modules set by pip3
 jinja2
 
+[ssh key creation]
 connect Github:
 see https://qiita.com/shizuma/items/2b2f873a0034839e47ce
 ssh-keygen -t rsa
 here, -t for encrypt type (RSA)
 pass phrase can be skipped
+
+verify files created in ~/.ssh/
 
 Open the Github key setting page:
 https://github.com/settings/keys
@@ -107,6 +110,8 @@ copy and paste all text in id_rsa.pub
 
 To verify authentification,
 ssh -T git@github.com
+(type yes to 'continue to connect?' message,
+then a greeting will be returned)
 
 Create .gitconfig file at home directory and write email and name
 (reference the existing one) to issue an initial commit.
@@ -117,6 +122,14 @@ url = git@github.com:YugoOsano/cppmemo.git
 
 or, rewriting the url can be skipped when cloning by:
 git clone git@github.com:YugoOsano/cppmemo.git
+
+-----
+connect Gitlab
+copy and paste all text in (~/.ssh/) id_rsa.pub
+to https://gitlab.com/-/profile/keys
+
+ssh -T git@gitlab.com
+(to verify authentification; welcome will be returned)
 
 [web server creation]
 https://techblog.gmo-ap.jp/2019/07/08/10minutes-gce/
