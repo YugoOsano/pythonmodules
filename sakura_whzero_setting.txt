@@ -214,3 +214,9 @@ see "minimum lesson of tmux": https://qiita.com/nl0_blu/items/9d207a70ccc8467f7b
 :e [file] -> open a file in the current buffer
 :e [Ctrl+d] -> list files in the current directory
 :se enc?  -> return character encoding (UTF8)
+-----------------------------
+[WSL2] memo
+Python (optimized), Numpy/Scipy, IntelMKL
+https://qiita.com/osanshouo/items/7a729aabf65a70ad6762
+https://osanshouo.github.io/blog/2021/03/20-python-build/
+(installed at ~/.local/bin)
