@@ -220,3 +220,7 @@ Python (optimized), Numpy/Scipy, IntelMKL
 https://qiita.com/osanshouo/items/7a729aabf65a70ad6762
 https://osanshouo.github.io/blog/2021/03/20-python-build/
 (installed at ~/.local/bin)
+[HDF5]
+sudo apt-get install libhdf5-serial-dev
+sudo apt-get install hdf5-tools
+
