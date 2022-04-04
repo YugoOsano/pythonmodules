@@ -220,6 +220,12 @@ Python (optimized), Numpy/Scipy, IntelMKL
 https://qiita.com/osanshouo/items/7a729aabf65a70ad6762
 https://osanshouo.github.io/blog/2021/03/20-python-build/
 (installed at ~/.local/bin)
+Command line to install the latest MKL is indicated in
+https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=linux&distributions=webdownload&options=offline
+(wget, sh)
+Intel Math Kernel Library (MKL) Cookbook
+https://jp.xlsoft.com/documents/intel/mkl/11.2/mkl112_cookbook_book.pdf
+Heat transfer (Diffusion) equation resolved by BLAS, PARDISO
 [HDF5]
 sudo apt-get install libhdf5-serial-dev
 sudo apt-get install hdf5-tools
