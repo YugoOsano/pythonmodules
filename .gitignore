@@ -4,5 +4,6 @@ __pycache__/*
 *.h5
 *.pkl
 *.vtk
+*.pyc
 exit1
 
