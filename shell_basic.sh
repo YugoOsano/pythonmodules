@@ -116,3 +116,7 @@ sed -n 57,60p shell_basic.sh
 echo '\n---replace parameter value by sed---'
 UPTIME=`cat /proc/uptime`
 sed "s/^VERSION.*/VERSION=$UPTIME;/g" /etc/os-release
+
+# to find subdirectories which consume disk
+du -a . | sort -n -r | head -n 50
+
