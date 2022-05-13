@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # ./getopt_practice.py Hello World -> ['Hello', 'World'] as args
 # ./getopt_practice.py -f Hello -l World
@@ -13,6 +13,9 @@ def full_name():
     last_name  = ""
     argv = sys.argv[1:]
 
+    # here, "f:l:" is shortopts; the string of option letters that the script wants to recognize,
+    # with options that require an argument followed by a colon
+    # (':'; i.e., the same format that Unix getopt() uses).
     try:
         opts,args = getopt.getopt(argv, "f:l:")
     except:
