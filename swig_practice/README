@@ -1,0 +1,17 @@
+1)
+transcribe example.c, example.h, example.i, setup.py
+from https://www.tutorialspoint.com/wrapping-c-cplusplus-for-python-using-swig
+2)
+by running
+swig -python example.i
+example.py and example_wrap.c will be created.
+3)
+by running as told in
+https://www.geeksforgeeks.org/wrapping-cc-python-using-swig-set-1/
+python3 setup.py build_ext --inplace
+a so file _example.cpython-38-x86_64-linux-gnu.so and build/ subdirectory will be created.
+4)
+>>> from example import fact
+>>> fact(6)
+will return 720.
+
