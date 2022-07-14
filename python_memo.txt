@@ -99,6 +99,14 @@ conda update ipython
 # systemctl can't be used in WSL, service is used instead
 https://www.hobbby.net/pc/windows/post-422/
 
+# How do i add a python package path during runtime (2022 July)
+# https://stackoverflow.com/questions/5712460/how-do-i-add-a-python-package-path-during-runtime
+# in iPython:
+import sys
+sys.path.append('/home/yugo/pythonmodules')
+import combination
+combination.ncr(6,3)
+
 # Java update
 # https://qiita.com/takilog/items/43a2891756c6015aa2ee
 wget https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/openjdk-13.0.2_linux-x64_bin.tar.gz
