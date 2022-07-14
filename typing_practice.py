@@ -1,4 +1,14 @@
+# enum practice referencing
+# https://www.geeksforgeeks.org/enum-in-python/
+
 import typing
+import enum
+
+# definition needed on every item unlike C++
+class UserList(enum.Enum):
+    one = 1
+    two = 2
+    three = 3
 
 def ReturnMap(files: list)->dict:
     a = {0:[], 1:[]}
@@ -6,3 +16,8 @@ def ReturnMap(files: list)->dict:
 
 l=['aaa', 'bbb']
 ReturnMap(l)
+
+print (UserList.one) # UserList.one
+print (repr(UserList.one))
+print (type(UserList.one))
+print (UserList.one.name)
