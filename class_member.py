@@ -84,3 +84,7 @@ if __name__ == '__main__':
 
     accept_function(print_hello)
     accept_function()
+
+    # function as dict value
+    switch = {1:Widget.PrintWithOne}
+    switch[1]('Hello with switch')
