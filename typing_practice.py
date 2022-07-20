@@ -21,3 +21,12 @@ print (UserList.one) # UserList.one
 print (repr(UserList.one))
 print (type(UserList.one))
 print (UserList.one.name)
+
+# own enum member
+class ItemHolder:
+    def __init__(self,
+                 item: UserList):
+        self.item = item
+
+ih = ItemHolder(UserList.two)
+print (ih.item)
