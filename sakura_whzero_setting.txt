@@ -230,3 +230,16 @@ Heat transfer (Diffusion) equation resolved by BLAS, PARDISO
 sudo apt-get install libhdf5-serial-dev
 sudo apt-get install hdf5-tools
 
+[NodeJS]
+https://zenn.dev/keijiek/articles/4976559b876090
+nvm, npm will be installed under $HOME/.nvm
+see if curl already exists by:
+$ command -v curl
+initially install nvm (Node version manager) by curl command copied from:
+https://github.com/nvm-sh/nvm#installing-and-updating
+
+after verifying setting appended at the end of .bashrc,
+$ source ~/.bashrc  (-> nvm can be run)
+
+to install node (npm)
+$ nvm install node   (node is the alias of the stable version, where aliases can be listed by $ nvm alias)
