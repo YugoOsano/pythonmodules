@@ -73,6 +73,7 @@ libboost-all-dev gcc-8-multilib g++-8-multilib gdb python3-pip (pip3 as command)
 ipython3 python3-ipdb cmake
 libopenblas-dev liblapack-dev #<- enhance dlib performance
 pkg-config
+sqlite3 libsqlite3-dev
 
 dlib: machine learning library for C++/Python
 http://dlib.net/
@@ -94,6 +95,9 @@ python-pymysql python-flaskext.wtf
 
 Python modules set by pip3
 jinja2
+
+[pkg-config]
+pkg-config --cflags --libs sqlite3 (or any library)
 
 [ssh key creation]
 connect Github:
