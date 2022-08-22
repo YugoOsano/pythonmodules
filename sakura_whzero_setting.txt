@@ -72,6 +72,7 @@ sudo apt install cabal
 libboost-all-dev gcc-8-multilib g++-8-multilib gdb python3-pip (pip3 as command)
 ipython3 python3-ipdb cmake
 libopenblas-dev liblapack-dev #<- enhance dlib performance
+pkg-config
 
 dlib: machine learning library for C++/Python
 http://dlib.net/
