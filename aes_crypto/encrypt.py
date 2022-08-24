@@ -22,3 +22,12 @@ sys.stdout.buffer.write(to_write)
 # cat [file of encrypted text] | openssl aes-256-cbc -d -base64 -pbkdf2 > [file of original text]
 
 # options are shown by  openssl help
+
+# append the following functions in .bashrc
+# (see https://stackoverflow.com/questions/7131670/make-a-bash-alias-that-takes-a-parameter)
+# aes_encrypt () {
+#                cat $1 | openssl aes-256-cbc -base64 -pbkdf2
+#                }
+# aes_decrypt () {
+#                cat $1 | openssl aes-256-cbc -d -base64 -pbkdf2
+#                }
