@@ -7,6 +7,10 @@ jobs:
   say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
+    # cimg stands for convenience image:
+    # https://circleci.com/blog/announcing-our-next-generation-convenience-images-smaller-faster-more-deterministic/
+    # base is their Ubuntu-based basic image
+    # https://circleci.com/ja/blog/announcing-our-next-generation-convenience-images-smaller-faster-more-deterministic/
     docker:
       - image: cimg/base:stable
     # Add steps to the job
