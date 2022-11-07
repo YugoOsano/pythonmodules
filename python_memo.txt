@@ -142,3 +142,12 @@ python3 -m venv venv
 # mktemp
 # https://www.tutorialspoint.com/unix_commands/mktemp.htm
 
+# lammps getting started
+# https://qiita.com/tkmtSo/items/34a0098cb967f2a9fdfe
+# https://qiita.com/tkmtSo/items/e43220cd9bbb7634af34
+# as MANYBODY package is needed to run in.minimize (Fe relaxation)
+# it was installed by
+~/software/lammps-23Jun2022/build$ cmake -D PKG_MANYBODY=yes -D PKG_ATC=yes ../cmake/
+~/software/lammps-23Jun2022/build$ make
+# here, ATC stands for atom-to-continuum
+
