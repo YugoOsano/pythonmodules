@@ -231,6 +231,12 @@ https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-down
 Intel Math Kernel Library (MKL) Cookbook
 https://jp.xlsoft.com/documents/intel/mkl/11.2/mkl112_cookbook_book.pdf
 Heat transfer (Diffusion) equation resolved by BLAS, PARDISO
+
+X application run on VcXsrv/WSL2
+https://rin-ka.net/windows-x-server/
+see nameserver IP in /etc/resolv.conf
+$ export DISPLAY=[the nameserver IP]:0.0
+run C:\Program Files\VcXsrv\xlaunch.exe (not vcxsrv) with Disable Access Control option (radio button)
 [HDF5]
 sudo apt-get install libhdf5-serial-dev
 sudo apt-get install hdf5-tools
