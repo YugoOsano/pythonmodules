@@ -7,4 +7,6 @@ __pycache__/*
 *.pyc
 *.csv
 exit1
-
+gaussian_process/*.xyz*
+gaussian_process/*.traj
+gaussian_process/*.xml
