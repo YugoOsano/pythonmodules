@@ -98,6 +98,10 @@ jinja2
 
 [pkg-config]
 pkg-config --cflags --libs sqlite3 (or any library)
+# pkg-config looks for *.pc files at /usr/lib/x86_64-linux-gnu/pkgconfig/ (and other pkgconfig/) by default;
+# plus directories defined in $PKG_CONFIG_PATH
+# to link specific shared object files by gcc/gfortran:
+# https://stackoverflow.com/questions/335928/ld-cannot-find-an-existing-library
 
 [ssh key creation]
 connect Github:
