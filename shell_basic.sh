@@ -9,7 +9,13 @@
 a=''
 for i in {1..5}
 do
-    echo "hello $i times"
+    # $i turned to the assigned number when enclosed by double quotation
+    # $((...)) executes arithmetic operation
+    # https://qiita.com/akinomyoga/items/9761031c551d43307374
+    # use bc for decimals as bash only does integers (StackOverFlow 12722095)
+    echo "hello $i : double $(($i*2))"
+    x=`echo "0.2*$i" | bc -l`
+    echo $x
     a=$a$i #character concatenation
     # file creation
     echo "hello" > tmpfile$i.txt
