@@ -29,10 +29,13 @@ rm tmpfile*
 echo $'\x54\x55'
 
 # awk basic
+# https://www.tohoho-web.com/ex/awk.html
 h='hello world'
 echo $h | awk '{print $0}' # hello world
 echo $h | awk '{print $1}' # hello
 echo $h | awk '{print $2}' # world
+toawk='12 9 13'
+echo $toawk | awk '{if($2 < 10) {print $0}}' # all print
 
 hc='hello,world'
 #specify separating character by -F option
