@@ -119,6 +119,9 @@ uname -r # uname prints system info
 # show only specified lines in a file: 57-60th lines here
 sed -n 57,60p shell_basic.sh
 
+# pick up lines beginning with number after remove blanks at head of a line
+sed -e 's/^\s*//g' memo_raspberry_pi.txt | grep '^[0-9]'
+
 # replace parameter value by sed
 # https://stackoverflow.com/questions/11245144/replace-whole-line-containing-a-string-using-sed
 # https://stackoverflow.com/questions/11146098/use-a-variable-in-a-sed-command
