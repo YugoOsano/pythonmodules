@@ -132,3 +132,7 @@ sed "s/^VERSION.*/VERSION=$UPTIME;/g" /etc/os-release
 # to find subdirectories which consume disk
 du -a . | sort -n -r | head -n 50
 
+# extract a tar archive in another subdirectory
+# https://unix.stackexchange.com/questions/25311/create-target-directory-when-extracting-tarball
+# tar zxvf jmol.tar.gz --one-top-level=[new dir] (on version of tar)
+# mkdir [new dir] && tar zxvf jmol.tar.gz -C [new dir]
