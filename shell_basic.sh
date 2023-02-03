@@ -130,9 +130,15 @@ UPTIME=`cat /proc/uptime`
 sed "s/^VERSION.*/VERSION=$UPTIME;/g" /etc/os-release
 
 # to find subdirectories which consume disk
-du -a . | sort -n -r | head -n 50
+# du -h option to add K,M,G on storage consumption
+du -a -h . | sort -n -r | head -n 50
 
 # extract a tar archive in another subdirectory
 # https://unix.stackexchange.com/questions/25311/create-target-directory-when-extracting-tarball
 # tar zxvf jmol.tar.gz --one-top-level=[new dir] (on version of tar)
 # mkdir [new dir] && tar zxvf jmol.tar.gz -C [new dir]
+
+# How to print the ld(linker) search path
+# https://stackoverflow.com/questions/9922949/how-to-print-the-ldlinker-search-path
+# tr command to replace semicolon by linefeed
+ld --verbose | grep SEARCH_DIR | tr -s ' ;' \\012
