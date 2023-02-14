@@ -36,7 +36,8 @@ echo $h | awk '{print $1}' # hello
 echo $h | awk '{print $2}' # world
 toawk='12 9 13'
 echo $toawk | awk '{if($2 < 10) {print $0}}' # all print
-
+echo $toawk | awk '{printf("%f,%d,%d", $1,$2,$3)}' # not to print a new line (StackOverFlow 2021982)
+echo
 hc='hello,world'
 #specify separating character by -F option
 echo $hc | awk -F',' '{print $1}'
