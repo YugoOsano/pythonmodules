@@ -8,5 +8,6 @@ __pycache__/*
 *.csv
 exit1
 gaussian_process/*.xyz*
+gaussian_process/*.cfg
 gaussian_process/*.traj
-gaussian_process/*.xml
+gaussian_process/*.xml*
