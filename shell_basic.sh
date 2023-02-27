@@ -143,3 +143,14 @@ du -a -h . | sort -n -r | head -n 50
 # https://stackoverflow.com/questions/9922949/how-to-print-the-ldlinker-search-path
 # tr command to replace semicolon by linefeed
 ld --verbose | grep SEARCH_DIR | tr -s ' ;' \\012
+
+# parallelize bash for loop
+# (the article includes how to control the number of processes, plus
+#  tells how to take an argument in a shell functions)
+# https://unix.stackexchange.com/questions/103920/parallelize-a-bash-for-loop
+task(){
+   sleep 0.5; echo "$1";
+}
+for thing in a b c d e f g; do
+  task "$thing" &
+done

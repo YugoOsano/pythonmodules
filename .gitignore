@@ -11,3 +11,5 @@ gaussian_process/*.xyz*
 gaussian_process/*.cfg
 gaussian_process/*.traj
 gaussian_process/*.xml*
+gaussian_process/sparse*
+gaussian_process/*.tmp
